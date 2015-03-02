@@ -9,8 +9,11 @@ from django.contrib.auth.models import User
 
 @login_required(login_url='/admin/login/')
 def index(response):
-    title={'title':'test django web html'}
+#    title={'title':'test django web html'}
 #    print User.get_username()
+    menus=["Home","server","docker","command","about"]
+    title={'menus':menus,'title':"index"}
+
     return render_to_response('main/base.html',title)
 
 @login_required
