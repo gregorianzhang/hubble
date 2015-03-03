@@ -10,6 +10,8 @@
     <!-- Bootstrap 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     -->
+		<link href="{% static "common/bootstrap-3.3.2/css/bootstrap.min.css" %}" rel="stylesheet">
+		<link href="{% static "common/bootstrap-3.3.2/css/bootstrap-theme.min.css" %}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,8 +21,8 @@
 	</head>
 
 	<body>
-
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -33,7 +35,7 @@
 
 			</div>
 
-			<div id="navbar" class="collapse navbar-collapse">
+			<div id="navbar" class="navbar-collapse collapse">
 	                	<ul class="nav navbar-nav">
 					{% for menu in menus %}
 						<li><a href="#">{{ menu }}</a> </li>
@@ -55,20 +57,28 @@
 
   {% endblock %}
 
+	<div class="jumbotron">
+		<h1>Navbar example</h1>
+	        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+	        <p>
+	        <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+	        </p>
+	</div>
+
+
+	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- <script src="js/bootstrap.min.js"></script> -->
 
 		<script src="{% static "common/jquery/dist/jquery.min.js" %}"></script>  		
+
+		<script src="{% static "common/bootstrap-3.3.2/js/bootstrap.min.js" %}"></script>
 		<script src="{% static "main/js/main.js" %}"></script>
 		<link href="{% static "main/css/main.css" %}" rel="stylesheet">
 		<script src="{% static "common/js/common.js" %}"></script>
 		<link href="{% static "common/css/common.css" %}" rel="stylesheet">
-
-		<script src="{% static "common/bootstrap-3.3.2/js/bootstrap.min.js" %}"></script>
-		<link href="{% static "common/bootstrap-3.3.2/css/bootstrap.css" %}" rel="stylesheet">
-		<link href="{% static "common/bootstrap-3.3.2/css/bootstrap-theme.css" %}" rel="stylesheet">
 
 	</body>
 </html>
